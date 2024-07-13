@@ -19,3 +19,5 @@ Plug 'rebelot/kanagawa.nvim'
 call plug#end()
 
 :colorscheme kanagawa
+
+:lua require'lspconfig'.clangd.setup{}
