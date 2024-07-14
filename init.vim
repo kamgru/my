@@ -11,11 +11,14 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+noremap <leader>zz <cmd>ZenMode<cr>
+
 call plug#begin()
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'rebelot/kanagawa.nvim'
+Plug 'folke/zen-mode.nvim'
 call plug#end()
 
 :colorscheme kanagawa
