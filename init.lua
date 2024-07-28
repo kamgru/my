@@ -46,11 +46,12 @@ vim.keymap.set('n', '<leader>zz', function() zen.toggle(zen_opt) end)
 
 vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>')
 vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
-vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<cr>')
+vim.keymap.set('n', '<leader><Tab>', '<cmd>Telescope buffers<cr>')
 vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<cr>')
 vim.keymap.set('n', '<leader>nn', '<cmd>noh<cr>')
 vim.keymap.set('n', '<leader>rr', function() vim.lsp.buf.rename() end)
 vim.keymap.set('n', '<leader>qwe', '<cmd>e ~/.config/nvim/init.lua<cr>')
+vim.keymap.set('n', '<S-Tab>', '<cmd>bp<cr>')
 
 require'lspconfig'.clangd.setup{}
 
