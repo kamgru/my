@@ -1,19 +1,27 @@
-Plugin 'preservim/nerdtree'
 
-:map \t <Action>(ActivateTerminalToolWindow)
-:map \w <Action>(CloseContent)
+:let mapleader = "\\"
+
 :set relativenumber
 :set number
-" Show a few lines of context around the cursor. Note that this makes the
-" text scroll if you mouse-click near the start or end of the window.
-set scrolloff=5
+:set scrolloff=5
 
-" Do incremental searching.
-set incsearch
+:set incsearch
 
-" Don't use Ex mode, use Q for formatting.
-map Q gq
+:map Q gq
 
 :set quickscope
+:set nerdtree
 
 :imap <C-Space> <Esc>
+
+:set clipboard=unnamedplus
+:set ideajoinset clipboard^=ideaputset ideajoin
+
+nmap <leader>fd <action>(GotoClass)
+nmap <leader>ff <action>(GotoFile)
+nmap <leader>fa <action>(GotoActions)
+nmap <leader>rt <action>(RiderUnitTestRunContextAction)
+nmap <leader>rd <action>(RiderUnitTestDebugContextAction)
+nmap <leader>rr <action>(RenameElement)
+nmap <leader>bb <action>(BuildSolutionAction)
+nmap <leader>? <action>(ShowHoverInfo)

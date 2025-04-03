@@ -6,6 +6,7 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.signcolumn = 'yes'
 vim.opt.cursorline = true
+vim.g.OmniSharp_server_use_net6 = 1
 
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
@@ -24,6 +25,8 @@ Plug 'hrsh7th/nvim-cmp'
 
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
+
+Plug 'OmniSharp/omnisharp-vim'
 
 vim.call('plug#end')
 
@@ -53,6 +56,7 @@ vim.keymap.set('n', '<leader>rr', function() vim.lsp.buf.rename() end)
 vim.keymap.set('n', '<leader>qwe', '<cmd>e ~/.config/nvim/init.lua<cr>')
 vim.keymap.set('n', '<S-Tab>', '<cmd>bp<cr>')
 
-require'lspconfig'.clangd.setup{}
+--require'lspconfig'.clangd.setup{}
+--require'lspconfig'.omnisharp.setup{}
 
 
